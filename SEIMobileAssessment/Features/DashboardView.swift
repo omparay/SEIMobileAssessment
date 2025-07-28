@@ -20,12 +20,15 @@ struct DashboardView: View {
                             NavigationLink(destination: CourseMenuContainerView()) {
                                 TaskCardView()
                             }
+                            .foregroundStyle(Color.black)
                             NavigationLink(destination: CourseMenuContainerView()) {
                                 TaskCardView()
                             }
+                            .foregroundStyle(Color.black)
                             NavigationLink(destination: CourseMenuContainerView()) {
                                 TaskCardView()
                             }
+                            .foregroundStyle(Color.black)
                         }
                     }
                     .fixedSize(horizontal: false, vertical: true)
