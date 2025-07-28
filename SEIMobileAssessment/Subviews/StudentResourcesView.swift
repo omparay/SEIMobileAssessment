@@ -16,7 +16,7 @@ struct StudentResourcesView: View {
                 Text("See More").font(.caption)
             }
             .padding(.bottom)
-            HStack(alignment: .lastTextBaseline,spacing: 24) {
+            HStack(alignment: .lastTextBaseline,spacing: 12) {
                 Label("Campus", systemImage: "building.2").labelStyle(VerticalLabelStyle())
                 Label("Finances", systemImage: "dollarsign.bank.building").labelStyle(VerticalLabelStyle())
                 Label("Academics", systemImage: "graduationcap").labelStyle(VerticalLabelStyle())
@@ -32,7 +32,7 @@ struct VerticalLabelStyle: LabelStyle {
     func makeBody(configuration: Configuration) -> some View {
         VStack(alignment: .center, spacing: 4) {
             configuration.icon.font(.title)
-            configuration.title.font(.caption.bold())
+            configuration.title.font(.caption2)
         }
     }
 }

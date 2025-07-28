@@ -9,25 +9,29 @@ import SwiftUI
 
 struct DashboardView: View {
     var body: some View {
-        VStack(alignment: .leading) {
-            UserProfileView()
-            CourseProgressView()
-            Text("My Tasks")
-            ScrollView(.horizontal) {
-                LazyHStack {
-                    TaskCardView().frame(maxWidth: 250)
-                    TaskCardView().frame(maxWidth: 250, maxHeight: .infinity)
-                    TaskCardView().frame(maxWidth: 250, maxHeight: .infinity)
+        ScrollView {
+            LazyVStack(alignment: .leading) {
+                UserProfileView()
+                CourseProgressView()
+                Text("My Tasks")
+                ScrollView(.horizontal) {
+                    LazyHStack {
+                        TaskCardView()
+                        TaskCardView()
+                        TaskCardView()
+                    }
                 }
-            }
-            StudentResourcesView()
-            Text("News & Updates")
-            ScrollView(.horizontal) {
-                LazyHStack {
-                    NewsCardView().frame(maxWidth: 250, maxHeight: .infinity)
-                    NewsCardView().frame(maxWidth: 250, maxHeight: .infinity)
-                    NewsCardView().frame(maxWidth: 250, maxHeight: .infinity)
+                .fixedSize(horizontal: false, vertical: true)
+                StudentResourcesView()
+                Text("News & Updates")
+                ScrollView(.horizontal) {
+                    LazyHStack {
+                        NewsCardView()
+                        NewsCardView()
+                        NewsCardView()
+                    }
                 }
+                .fixedSize(horizontal: false, vertical: true)
             }
         }
         .padding(.horizontal)

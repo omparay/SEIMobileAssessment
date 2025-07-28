@@ -17,6 +17,7 @@ struct UserProfileView: View {
             Spacer()
             Image("Avatar")
         }
+        .padding(.top)
     }
 }
 

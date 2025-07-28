@@ -12,20 +12,18 @@ struct MainNavigationView: View {
         TabView {
             Tab("Home",systemImage: "house.fill") {
                 DashboardView()
-                    .toolbarBackground(.visible, for: .tabBar)
+                .toolbarBackground(.visible, for: .tabBar)
             }
             Tab("Courses", systemImage: "bookmark.fill") {
                 DemoView()
-                    .toolbarBackground(.visible, for: .tabBar)
+                .toolbarBackground(.visible, for: .tabBar)
             }
             Tab("Support", systemImage: "lifepreserver") {
                 DemoView()
-                    .toolbarBackground(.visible, for: .tabBar)
                 .toolbarBackground(.visible, for: .tabBar)
             }
             Tab("Notifications", systemImage: "bell.badge"){
                 DemoView()
-                    .toolbarBackground(.visible, for: .tabBar)
                 .toolbarBackground(.visible, for: .tabBar)
             }
         }

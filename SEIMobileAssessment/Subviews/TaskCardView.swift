@@ -19,28 +19,36 @@ struct TaskCardView: View {
             .background(Color.myTaskFill)
             HStack {
                 VStack(alignment: .leading) {
-                    Text("NURS5000").padding(.bottom)
+                    Text("NURS5000")
+                    .padding(.bottom)
                     Button {
                     } label: {
                         VStack {
-                            Text("1 overdue").font(.caption)
+                            Text("1 overdue")
+                            .foregroundStyle(Color.black)
+                            .font(.caption)
+                            .fixedSize(horizontal: true, vertical: false)
                         }
                     }
                     .padding(.horizontal)
                     .background {
                         RoundedRectangle(cornerRadius: 16)
-                            .fill(Color.red.opacity(0.1))
+                        .stroke(Color.gray,lineWidth: 1)
                     }
+                    .padding(.bottom, 2)
                     Button {
                     } label: {
                         VStack {
-                            Text("4 upcoming tasks").font(.caption)
+                            Text("4 upcoming tasks")
+                            .foregroundStyle(Color.black)
+                            .font(.caption)
+                            .fixedSize(horizontal: true, vertical: false)
                         }
                     }
                     .padding(.horizontal)
                     .background {
                         RoundedRectangle(cornerRadius: 16)
-                            .fill(Color.blue.opacity(0.1))
+                            .stroke(Color.gray,lineWidth: 2)
                     }
                 }
                 Spacer()
@@ -54,13 +62,14 @@ struct TaskCardView: View {
                     Text("1").font(.callout)
                 }
                 HStack {
-                    Label("Announcements", systemImage: "envelope.badge").font(.callout)
+                    Label("Announcements", systemImage: "envelope.badge")
                     Spacer()
                     Text("2").font(.callout)
                 }
             }
             .padding()
         }
+        .frame(width: 250)
         .cornerRadius(16)
     }
 }
