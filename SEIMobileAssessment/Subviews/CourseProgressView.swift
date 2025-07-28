@@ -13,12 +13,19 @@ struct CourseProgressView: View {
             VStack(alignment: .leading) {
                 Text("Assoc. Arts in Business Admin").font(.title3)
                 ProgressView(value: /*@START_MENU_TOKEN@*/0.5/*@END_MENU_TOKEN@*/)
+                    .tint(Color.white)
+                    .background(Color.gray)
                 Text("72.5 of 90 points completed").font(.caption)
 
             }
             Spacer()
         }
-        .padding(.horizontal)
+        .padding()
+        .background {
+            RoundedRectangle(cornerRadius: 16)
+                .fill(Color.progressCardFill)
+        }
+        .foregroundStyle(Color.white)
     }
 }
 
