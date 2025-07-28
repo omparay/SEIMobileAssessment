@@ -9,32 +9,40 @@ import SwiftUI
 
 struct DashboardView: View {
     var body: some View {
-        ScrollView {
-            LazyVStack(alignment: .leading) {
-                UserProfileView()
-                CourseProgressView()
-                Text("My Tasks")
-                ScrollView(.horizontal) {
-                    LazyHStack {
-                        TaskCardView()
-                        TaskCardView()
-                        TaskCardView()
+        NavigationStack {
+            ScrollView {
+                LazyVStack(alignment: .leading) {
+                    UserProfileView()
+                    CourseProgressView()
+                    Text("My Tasks")
+                    ScrollView(.horizontal) {
+                        LazyHStack {
+                            NavigationLink(destination: CourseMenuContainerView()) {
+                                TaskCardView()
+                            }
+                            NavigationLink(destination: CourseMenuContainerView()) {
+                                TaskCardView()
+                            }
+                            NavigationLink(destination: CourseMenuContainerView()) {
+                                TaskCardView()
+                            }
+                        }
                     }
-                }
-                .fixedSize(horizontal: false, vertical: true)
-                StudentResourcesView()
-                Text("News & Updates")
-                ScrollView(.horizontal) {
-                    LazyHStack {
-                        NewsCardView()
-                        NewsCardView()
-                        NewsCardView()
+                    .fixedSize(horizontal: false, vertical: true)
+                    StudentResourcesView()
+                    Text("News & Updates")
+                    ScrollView(.horizontal) {
+                        LazyHStack {
+                            NewsCardView()
+                            NewsCardView()
+                            NewsCardView()
+                        }
                     }
+                    .fixedSize(horizontal: false, vertical: true)
                 }
-                .fixedSize(horizontal: false, vertical: true)
             }
+            .padding(.horizontal)
         }
-        .padding(.horizontal)
     }
 }
 
