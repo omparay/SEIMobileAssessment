@@ -9,7 +9,15 @@ import SwiftUI
 
 struct UserProfileView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack(alignment: .top) {
+            VStack(alignment: .leading,) {
+                Text("Hello Abel").font(.title)
+                Text("Good Afternoon").font(.subheadline)
+            }
+            Spacer()
+            Image("Avatar")
+        }
+        .padding(.horizontal)
     }
 }
 

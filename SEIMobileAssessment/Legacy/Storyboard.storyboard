@@ -11,7 +11,7 @@
         <!--Course Menu View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="CourseMenuViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CourseMenuViewController" id="Y6W-OH-hqX" customClass="CourseMenuViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,7 +26,7 @@
         <!--Quiz Details View Controller-->
         <scene sceneID="tna-T4-oYO">
             <objects>
-                <viewController id="5zu-pj-THd" customClass="QuizDetailsViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QuizDetailsViewController" id="5zu-pj-THd" customClass="QuizDetailsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="05u-fF-5vr">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
