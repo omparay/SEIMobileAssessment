@@ -6,10 +6,18 @@
 //
 
 import SwiftUI
+import UIKit
 
-struct CourseMenuContainerView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+struct CourseMenuContainerView: UIViewControllerRepresentable {
+
+    func makeUIViewController(context: Context) -> CourseMenuViewController {
+        let storyboard = UIStoryboard(name: "Storyboard", bundle: nil)
+        let result = storyboard.instantiateViewController(withIdentifier: "CourseMenuViewController") as! CourseMenuViewController
+        return result
+    }
+    
+    func updateUIViewController(_ uiViewController: CourseMenuViewController, context: Context) {
+
     }
 }
 

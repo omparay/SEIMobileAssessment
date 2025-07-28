@@ -6,11 +6,20 @@
 //
 
 import SwiftUI
+import UIKit
 
-struct QuizDetailsContainerView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+struct QuizDetailsContainerView: UIViewControllerRepresentable {
+
+    func makeUIViewController(context: Context) -> QuizDetailsViewController {
+        let storyboard = UIStoryboard(name: "Storyboard", bundle: nil)
+        let result = storyboard.instantiateViewController(withIdentifier: "QuizDetailsViewController") as! QuizDetailsViewController
+        return result
     }
+
+    func updateUIViewController(_ uiViewController: QuizDetailsViewController, context: Context) {
+
+    }
+
 }
 
 #Preview {

@@ -15,7 +15,7 @@ struct MainNavigationView: View {
                 .toolbarBackground(.visible, for: .tabBar)
             }
             Tab("Courses", systemImage: "bookmark.fill") {
-                DemoView()
+                QuizDetailsContainerView()
                 .toolbarBackground(.visible, for: .tabBar)
             }
             Tab("Support", systemImage: "lifepreserver") {
