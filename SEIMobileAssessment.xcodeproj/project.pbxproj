@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		A73BA49C2E37EBA9003B1EDB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A73BA49B2E37EBA9003B1EDB /* README.md */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		A739F4402E37E26600C90485 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +31,7 @@
 		A739F4322E37E26500C90485 /* SEIMobileAssessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SEIMobileAssessment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A739F43F2E37E26600C90485 /* SEIMobileAssessmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SEIMobileAssessmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A739F4492E37E26600C90485 /* SEIMobileAssessmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SEIMobileAssessmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A73BA49B2E37EBA9003B1EDB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +80,7 @@
 		A739F4292E37E26500C90485 = {
 			isa = PBXGroup;
 			children = (
+				A73BA49B2E37EBA9003B1EDB /* README.md */,
 				A739F4342E37E26500C90485 /* SEIMobileAssessment */,
 				A739F4422E37E26600C90485 /* SEIMobileAssessmentTests */,
 				A739F44C2E37E26600C90485 /* SEIMobileAssessmentUITests */,
@@ -212,6 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A73BA49C2E37EBA9003B1EDB /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
