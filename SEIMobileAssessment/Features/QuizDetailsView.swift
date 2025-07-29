@@ -1,5 +1,5 @@
 //
-//  CourseMenuView.swift
+//  QuizDetailsView.swift
 //  SEIMobileAssessment
 //
 //  Created by Oliver Paray on 7/28/25.
@@ -7,20 +7,25 @@
 
 import SwiftUI
 
-struct CourseMenuView: View {
+struct QuizDetailsView: View {
     @Binding var path: NavigationPath
     @Environment(\.dismiss) var dismiss
 
     var body: some View {
         VStack(alignment: .leading) {
-            CourseMenuContainerView(selectedItem: $path)
+            QuizDetailsContainerView()
         }
         .onChange(of: path) { oldValue, newValue in
             print("Selection changed from \(oldValue) to \(newValue)")
         }
-        .navigationTitle("Course Menu")
         .navigationBarBackButtonHidden()
         .toolbar {
+            ToolbarItem(placement: .principal) {
+                VStack {
+                    Text("Quiz Details").font(.headline)
+                    Text("NURS500 Section 02").font(.subheadline)
+                }
+            }
             ToolbarItem(placement: .topBarLeading) {
                 Button {
                     dismiss()
@@ -35,5 +40,5 @@ struct CourseMenuView: View {
 
 #Preview {
     @Previewable @State var path = NavigationPath()
-    CourseMenuView(path: $path)
+    QuizDetailsView(path: $path)
 }

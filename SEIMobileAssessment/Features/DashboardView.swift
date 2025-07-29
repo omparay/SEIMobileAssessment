@@ -55,7 +55,7 @@ struct DashboardView: View {
                     case "task":
                         CourseMenuView(path: $path)
                     case "course" :
-                        QuizDetailsContainerView()
+                        QuizDetailsView(path: $path)
                     default:
                         DemoView()
                 }
