@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct DashboardView: View {
+    @State private var path = NavigationPath()
+
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $path) {
             ScrollView {
                 LazyVStack(alignment: .leading) {
                     UserProfileView()
@@ -17,15 +19,15 @@ struct DashboardView: View {
                     Text("My Tasks")
                     ScrollView(.horizontal) {
                         LazyHStack {
-                            NavigationLink(destination: CourseMenuContainerView()) {
+                            NavigationLink(value: "task") {
                                 TaskCardView()
                             }
                             .foregroundStyle(Color.black)
-                            NavigationLink(destination: CourseMenuContainerView()) {
+                            NavigationLink(value: "task") {
                                 TaskCardView()
                             }
                             .foregroundStyle(Color.black)
-                            NavigationLink(destination: CourseMenuContainerView()) {
+                            NavigationLink(value: "task") {
                                 TaskCardView()
                             }
                             .foregroundStyle(Color.black)
@@ -45,6 +47,19 @@ struct DashboardView: View {
                 }
             }
             .padding(.horizontal)
+            .onChange(of: path) { oldValue, newValue in
+                print("Selection changed from \(oldValue) to \(newValue)")
+            }
+            .navigationDestination(for: String.self) { navItem in
+                switch navItem {
+                    case "task":
+                        CourseMenuView(path: $path)
+                    case "course" :
+                        QuizDetailsContainerView()
+                    default:
+                        DemoView()
+                }
+            }
         }
     }
 }
